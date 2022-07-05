@@ -16,7 +16,5 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-git clone https://github.com/jerrykuku/lua-maxminddb  package/lua-maxminddb
-git clone https://github.com/jerrykuku/luci-app-vssr  package/luci-app-vssr
-git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
-git clone https://github.com/vernesong/OpenClash  package/luci-app-openclash
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
